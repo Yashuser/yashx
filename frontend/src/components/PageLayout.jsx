@@ -10,7 +10,7 @@ export const PageLayout = ({ children, logoSrc }) => {
       <div className="relative z-10">
         <Navigation />
         <Logo src={logoSrc} />
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-6">
           {children}
         </main>
       </div>
