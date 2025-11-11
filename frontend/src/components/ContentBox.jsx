@@ -7,7 +7,7 @@ export const ContentBox = ({ children, className }) => {
     <Card 
       className={cn(
         'backdrop-blur-md bg-card/85 border-border shadow-gaming-lg',
-        'p-8 sm:p-12',
+        'p-4 sm:p-6 md:p-8 lg:p-12',
         'animate-fade-in',
         className
       )}
