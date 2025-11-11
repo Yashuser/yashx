@@ -8,50 +8,50 @@ export default function SubredditPage() {
   return (
     <PageLayout>
       <ContentBox>
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
           Join Our Community
         </h1>
         
-        <p className="text-lg text-muted-foreground mb-8">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8">
           Connect with thousands of players, share your stories, and stay updated on server news.
         </p>
         
-        <div className="grid sm:grid-cols-2 gap-6 mb-8">
-          <div className="p-6 bg-secondary/50 rounded-lg border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <div className="p-4 sm:p-6 bg-secondary/50 rounded-lg border border-border">
+            <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3 flex items-center gap-2">
               Reddit Community
             </h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Join r/2b2t to discuss server events, share screenshots, and connect with other players.
             </p>
             <Button 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base"
               onClick={() => window.open('https://reddit.com/r/2b2t', '_blank')}
             >
               Visit Subreddit
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
           
-          <div className="p-6 bg-secondary/50 rounded-lg border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-3">Discord Server</h3>
-            <p className="text-muted-foreground mb-4">
+          <div className="p-4 sm:p-6 bg-secondary/50 rounded-lg border border-border">
+            <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">Discord Server</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Real-time chat with players, coordinate with groups, and get instant updates.
             </p>
             <Button 
               variant="outline"
-              className="border-primary/30 text-primary hover:bg-primary/10"
+              className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/10 text-sm sm:text-base"
               onClick={() => window.open('https://discord.gg/2b2t', '_blank')}
             >
               Join Discord
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
         </div>
         
-        <div className="p-6 bg-muted/30 rounded-lg border border-border">
-          <h3 className="text-lg font-semibold text-foreground mb-3">Community Guidelines</h3>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+        <div className="p-4 sm:p-6 bg-muted/30 rounded-lg border border-border">
+          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3">Community Guidelines</h3>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground text-xs sm:text-sm">
             <li>Be respectful to community members</li>
             <li>No spam or excessive self-promotion</li>
             <li>Keep discussions relevant to 2b2t</li>
