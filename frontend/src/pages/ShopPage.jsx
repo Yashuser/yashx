@@ -61,48 +61,48 @@ export default function ShopPage() {
   return (
     <PageLayout>
       <ContentBox>
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4 text-center">
           Support the Server
         </h1>
         
-        <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 sm:mb-12 text-center max-w-2xl mx-auto">
           Help keep 2b2t running and get priority access to the server.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`p-8 bg-card/85 backdrop-blur-md border-2 transition-all duration-300 hover:scale-105 ${
+              className={`p-4 sm:p-6 lg:p-8 bg-card/85 backdrop-blur-md border-2 transition-all duration-300 md:hover:scale-105 ${
                 plan.popular 
                   ? 'border-primary shadow-gaming-glow' 
                   : 'border-border hover:border-primary/50'
               }`}
             >
               {plan.popular && (
-                <Badge className="mb-4 bg-primary text-primary-foreground">
+                <Badge className="mb-3 sm:mb-4 bg-primary text-primary-foreground text-xs sm:text-sm">
                   Most Popular
                 </Badge>
               )}
               
-              <h3 className="text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                 {plan.name}
               </h3>
               
-              <div className="flex items-baseline mb-4">
-                <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                <span className="text-muted-foreground ml-2">{plan.period}</span>
+              <div className="flex items-baseline mb-3 sm:mb-4">
+                <span className="text-3xl sm:text-4xl font-bold text-foreground">{plan.price}</span>
+                <span className="text-sm sm:text-base text-muted-foreground ml-2">{plan.period}</span>
               </div>
               
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
                 {plan.description}
               </p>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-gaming-green flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{feature}</span>
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                    <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gaming-green flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -122,9 +122,9 @@ export default function ShopPage() {
           ))}
         </div>
         
-        <div className="mt-12 p-6 bg-muted/30 rounded-lg border border-border max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold text-foreground mb-3">Payment Information</h3>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm">
+        <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-muted/30 rounded-lg border border-border max-w-3xl mx-auto">
+          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3">Payment Information</h3>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground text-xs sm:text-sm">
             <li>All payments are processed securely</li>
             <li>Subscriptions renew automatically monthly</li>
             <li>Cancel anytime from your account settings</li>
