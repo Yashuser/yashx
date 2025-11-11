@@ -17,39 +17,39 @@ export default function CommandsPage() {
   return (
     <PageLayout>
       <ContentBox>
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
           Commands
         </h1>
         
-        <p className="text-muted-foreground mb-8">
+        <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
           Available commands on the server. Remember, this is anarchy - most commands are disabled!
         </p>
         
-        <Separator className="mb-8" />
+        <Separator className="mb-6 sm:mb-8" />
         
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {commands.map((cmd, index) => (
             <div 
               key={index}
-              className="p-4 bg-secondary/50 rounded-lg border border-border hover:border-primary/50 transition-colors duration-200"
+              className="p-3 sm:p-4 bg-secondary/50 rounded-lg border border-border hover:border-primary/50 transition-colors duration-200"
             >
               <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
-                <code className="text-primary font-mono text-sm sm:text-base">
+                <code className="text-primary font-mono text-xs sm:text-sm break-all">
                   {cmd.command}
                 </code>
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs flex-shrink-0">
                   {cmd.category}
                 </Badge>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-xs sm:text-sm">
                 {cmd.description}
               </p>
             </div>
           ))}
         </div>
         
-        <div className="mt-8 p-4 bg-muted/30 rounded-lg border border-border">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-muted/30 rounded-lg border border-border">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             <strong className="text-foreground">Note:</strong> Most traditional Minecraft commands are disabled
             to maintain the anarchy nature of the server. Admin commands and teleportation are not available.
           </p>
